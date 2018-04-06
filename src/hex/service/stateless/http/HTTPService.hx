@@ -48,7 +48,7 @@ class HTTPService extends AsyncStatelessService implements IHTTPService implemen
 		
 		#if (js && !nodejs)
 			this._request.async 					= httpConfig.async;
-			untyped this._request.withCredentials 	= httpConfig.withCredentials;
+			this._request.withCredentials 	= httpConfig.withCredentials;
 		#end
 		this._request.onData 		= this._onData;
 		this._request.onError 		= this._onError;
